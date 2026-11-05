@@ -1,0 +1,27 @@
+# Python environments
+.venv/
+.venv-ft/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Visual Studio
+.vs/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log 
+
