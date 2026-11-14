@@ -1,5 +1,9 @@
 <Solution>
-  <Project Path="DataStream/DataStream.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52">
+  <Folder Name="/Éléments de solution/">
+    <File Path=".gitignore" />
+    <File Path="requirements.txt" />
+  </Folder>
+  <Project Path="DataStream/DataStream.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="788aae75-709d-4002-ba88-3942ce9eff37">
     <Build Project="false" />
   </Project>
 </Solution>
