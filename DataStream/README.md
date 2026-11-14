@@ -68,3 +68,24 @@ sources jusqu'à leur restitution dans une application web,
 avec une attention particulière portée à la qualité
 des données et à la réutilisabilité du code.
 
+
+## Architecture du projet
+
+DataStream ALM suit une architecture simple : les données
+sont collectées, contrôlées et stockées dans PostgreSQL,
+puis exploitées pour produire des reportings interactifs.
+
+```mermaid
+flowchart TD
+    A["📄 CSV EVE"] --> C["Ingestion Python"]
+    B["📄 CSV NII"] --> C
+
+    C --> D["Validation et insertion<br/>database.py"]
+    D --> E[("PostgreSQL<br/>Historisation")]
+
+    E --> F["Lecture SQL<br/>reporting.py"]
+    F --> G["Calculs EVE / NII<br/>alm_processing.py"]
+
+    G --> H["📊 Streamlit<br/>Tableau de bord ALM"]
+    H --> I["Export Excel"]
+```
